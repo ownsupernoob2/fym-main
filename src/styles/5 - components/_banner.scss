@@ -1,0 +1,159 @@
+.banner {
+    width: 100%;
+    height: 40rem;
+    margin-top: 2rem;
+    
+   background: #f3f3f3;
+    display: flex;
+    object-fit: cover;
+    transform: translateX(5rem);
+    
+    @include mobile {
+        height: auto;
+        flex-direction: column;
+    }
+}
+
+.banner-desc {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 50%;
+
+    @include mobile {
+        padding: 5rem 0;
+    }
+
+    h1 {
+        font-size: 4.8rem;
+        margin-bottom: 1rem;
+        width: 80%;
+
+        @include mobile {
+            width: 100%; 
+        }
+    }
+}
+
+
+
+.banner-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-basis: 50%;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translateX(11rem)
+    }
+    
+
+}
+/* second banner */
+
+.banner2 {
+    width: 100%;
+    height: 40rem;
+    margin-top: 2rem;
+    background: url('images/banner-background2.jpg');
+   background-size:fill;
+       display: flex;
+    object-fit:fill;
+    background-repeat: no-repeat;
+    transform: translateX(5rem);
+    &:before {
+        content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(to bottom right,#002d08,#093d35);
+            opacity: .8; 
+      }
+    @include mobile {
+        height: auto;
+        flex-direction: column;
+    }
+}
+
+.banner-img2 {
+    width: 100%;
+    height: 100%;
+    flex-basis:20%;
+    overflow: hidden;
+    flex: 1;
+    img {
+        width:80%;
+        height: 80%;
+        object-fit:contain;
+        transform: translateX(4rem)
+
+    }
+}
+.banner-img3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-basis: 20%;
+    overflow: hidden;
+    flex: 1;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translateX(5rem)
+    }
+}
+
+.banner-button {
+    background: $white;
+    border: 1px solid $button-color;
+    padding: 23px 36px;
+    border: 1px solid $button-color;
+    color: $button-color;
+    font-weight: bold;
+    font-size: 24px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include bezier-transition(all, .3s, ease);
+  
+    &:hover {
+      cursor: pointer;
+      color: $button-hover;
+      background-color: rgb(236, 255, 240);
+      border: 1px solid $button-hover;
+      text-decoration: none;
+    }
+}
+
+
+.banner-desc2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 50%;
+    h1 {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+        width: 100%;
+
+        @include mobile {
+            width: 100%; 
+        }
+    }
+
+    
+}
+.banner-text{
+     font-weight: 300;
+    color:rgb(255, 255, 255)
+}
+
